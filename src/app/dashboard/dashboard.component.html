@@ -1,0 +1,8 @@
+<h3>Recent Locs</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let loc of letterOfCredits" class="col-1-4" routerLink="/detail/{{loc.id}}">
+    <div class="module loc">
+      <h4>{{loc.locId}}</h4>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,9 @@
+applications:
+- disk_quota: 1024M
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  host: letter-of-credit
+  name: letter-of-credit
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 1024M

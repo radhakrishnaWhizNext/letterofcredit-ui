@@ -1,0 +1,11 @@
+<div *ngIf="letterOfCredit">
+  <h2>{{letterOfCredit.locId}} Details</h2>
+  <div><span>Description: </span>{{letterOfCredit.description}}</div>
+  <div>
+    <label>Status:
+      <input [(ngModel)]="letterOfCredit.status" placeholder="status"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>

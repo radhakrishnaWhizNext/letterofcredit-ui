@@ -1,0 +1,24 @@
+<div>
+  <label>LocId:
+    <input #locId />
+  </label>
+  <label>Description:
+    <input #locDescription />
+  </label>
+  <button (click)="addLoc(locId.value, locDescription.value); locId.value=''; locDescription.value=''">
+    add
+  </button>
+</div>
+
+<h2>My Letter of Credits</h2>
+<ul class="letterofcredits">
+  <li *ngFor="let letterOfCredit of letterOfCredits">
+    <a routerLink="/detail/{{letterOfCredit.id}}">
+          <span class="badge">{{letterOfCredit.locId}}</span> {{letterOfCredit.status}}
+    </a>
+    <!-- (click)="onSelect(letterOfCredit)" [class.selected]="letterOfCredit === selectedLoc">
+    <span class="badge">{{letterOfCredit.id}}</span> {{letterOfCredit.status}} -->
+  </li>
+</ul>
+
+<!-- <app-loc-detail [letterOfCredit]="selectedLoc"></app-loc-detail> -->
